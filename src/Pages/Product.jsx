@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import ProductCard from '../components/card';
 import Navbar from '../components/Navbar';
+import { Link } from 'react-router';
 
 const Product = () => {
   const [card , setCard] = useState([]);
@@ -25,9 +26,11 @@ const Product = () => {
      <div className="flex flex-wrap justify-center md:justify-start gap-6 p-6 bg-gray-800">
      
   {card.map((item) => (
-    <div key={item.id} className="flex-1 min-w-[280px] max-w-[350px]">
+    <Link to={`/product/${item.id}`} key={item.id}>
+    <div  className="flex-1 min-w-[280px] max-w-[350px]">
       <ProductCard product={item} />
     </div>
+    </Link>
   ))}
 </div>
 

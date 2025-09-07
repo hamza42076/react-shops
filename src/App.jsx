@@ -8,6 +8,7 @@ import Register from './Pages/Register.jsx';
 import Login from './Pages/Login.jsx';
 import Page404 from './Pages/page404.jsx';
 import Product from './Pages/Product.jsx';
+import Products from './Pages/Products.jsx';
 
 
 const App = () => {
@@ -21,7 +22,11 @@ const App = () => {
       <Route path='/home' element={<Home/>} />
       <Route path='/about' element= {<About/>} />
       <Route path='/contact' element= {<Contact/>} />
-      <Route path='/product' element= {<Product/>} />
+      <Route path='/product'>
+      <Route index element= {<Product/>} />
+      <Route path=':id' element={<Products/>} />
+
+      </Route>
       <Route path='*' element= {<Page404/>} />
     </Routes>
     </>
