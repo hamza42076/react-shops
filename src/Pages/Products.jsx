@@ -31,6 +31,7 @@ const Product = () => {
   if (!product) return <h2 className="text-center mt-6 text-xl">No such product</h2>;
 
   return (
+    
     <div className="flex flex-col items-center m-6 border-2 p-6 rounded-lg shadow-lg max-w-3xl mx-auto bg-white">
       {/* Thumbnail */}
       <img
